@@ -40,8 +40,13 @@ end
 
 function module.start()
   print("Configuring Wifi ...")
-  wifi.setmode(wifi.STATION);
-  wifi.sta.getap(connectToNetwork)
+  loadfile("dnsServerInit.lua")("\192\168\4\1") -- starts DNS server / captive portal
+  wifi.setmode(wifi.SOFTAP);
+  wifi.ap.config(config.APPCFG)
+  wifi.eventmon.register(wifi.eventmon.AP_STACONNECTED, function(T)
+   print("\n\tAP - STATION CONNECTED".."\n\tMAC: "..T.MAC.."\n\tAID: "..T.AID)
+   end)
+   app.start()
 end
 
 return module
