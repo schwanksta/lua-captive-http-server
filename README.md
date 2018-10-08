@@ -1,6 +1,6 @@
 # Forked
 
-This is my fork of nodemcu-lua-server. I added the DNS redirection / captive portal via https://github.com/whendonkiesfly/esp8266-captive-portal and modified the send commands to send valid HTTP responses (though I think I could have just used the http module 🤷)
+This is my fork of [nodemcu-lua-server](https://github.com/rafalbromirski/nodemcu-lua-server). I added the DNS redirection / captive portal via [esp8266-captive-portal](https://github.com/whendonkiesfly/esp8266-captive-portal) and modified the send commands to send valid HTTP responses (though I think I could have just used the http module 🤷)
 
 # IoT NodeMCU webserver
 
